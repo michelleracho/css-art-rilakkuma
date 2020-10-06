@@ -8,6 +8,8 @@
 }
 
 body {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #45b8f6), color-stop(#2daa26), to(#2daa26));
+  background: linear-gradient(to bottom, #45b8f6 60%, #2daa26, #2daa26);
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,6 +98,8 @@ body {
   background-color: #252317;
   border-radius: 50%;
   position: absolute;
+  -webkit-animation: blink 3s infinite;
+          animation: blink 3s infinite;
 }
 
 .head .eye-right {
@@ -110,6 +114,30 @@ body {
       -ms-flex-order: 3;
           order: 3;
   left: 50px;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    height: 15px;
+  }
+  5% {
+    height: 2px;
+  }
+  20% {
+    height: 15px;
+  }
+}
+
+@keyframes blink {
+  0% {
+    height: 15px;
+  }
+  5% {
+    height: 2px;
+  }
+  20% {
+    height: 15px;
+  }
 }
 
 .head .snout {
