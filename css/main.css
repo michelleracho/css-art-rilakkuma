@@ -197,45 +197,47 @@ body {
 .hand-right,
 .hand-left {
   width: 45px;
-  height: 105px;
+  height: 100px;
   background-color: #a1662a;
   border-radius: 40%;
   border: 5px solid #3d2104;
   z-index: 10;
   position: absolute;
-  bottom: 43px;
+  bottom: 48px;
 }
 
 .hand-right::before,
 .hand-left::before {
   content: '';
-  width: 25px;
-  height: 50px;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  width: 20px;
+  height: 35px;
   background-color: inherit;
   position: absolute;
-  top: -6px;
+  top: -3.7px;
 }
 
 .hand-right {
-  right: 10px;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
+  right: 12px;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
 }
 
 .hand-right::before {
-  right: 17px;
+  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%);
+  right: 20.3px;
 }
 
 .hand-left {
-  left: 10px;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
+  left: 12px;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
 }
 
 .hand-left::before {
-  left: 17px;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  left: 20.4px;
 }
 
 .feet-right,
