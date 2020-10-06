@@ -25,7 +25,6 @@ $outline: 5px solid $color-brown-dark-3;
 }
 
 body {
-  background-color: slategrey;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -33,7 +32,6 @@ body {
 }
 
 .container {
-  border: 2px solid tomato;
   position: relative;
 }
 
@@ -90,6 +88,7 @@ body {
   border: $outline;
   position: relative;
   z-index: 10;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
@@ -162,10 +161,6 @@ body {
 .body {
   width: 130px;
   height: 130px;
-  // width: 140px;
-  // height: 160px;
-  // width: 180px;
-  // height: 200px;
   background-color: $color-brown-2;
   margin: 0 auto;
   border-radius: 30% / 80%;
@@ -177,19 +172,13 @@ body {
 
   &::before {
     content: '';
-    width: 80px;
-    height: 90px;
-    // width: 90px;
-    // height: 100px;
-    // width: 110px;
-    // height: 130px;
+    width: 75px;
+    height: 85px;
     background-color: $color-white;
     border-radius: 50%;
     position: absolute;
-    top: 45px;
-    left: 20px;
-    // top: 50px;
-    // left: 30px;
+    top: 35px;
+    left: 23px;
   }
 }
 .hand-right,
@@ -254,4 +243,69 @@ body {
 }
 .feet-left {
   left: 50px;
+}
+
+.pants,
+.hat {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(
+    to top,
+    $color-brown-dark-2,
+    $color-brown-dark-2 50%,
+    $color-yellow-light-1 50%,
+    $color-yellow-light-1
+  );
+  background-size: 100% 30px;
+  position: absolute;
+}
+
+.pants {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.hat {
+  top: 0;
+}
+
+.antenna-right,
+.antenna-left {
+  width: 7px;
+  height: 30px;
+  background-color: $color-brown-dark-2;
+  position: absolute;
+  z-index: 11;
+  top: 32px;
+}
+
+.antenna-right::before,
+.antenna-left::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $color-yellow-light-1;
+  // border: 1px solid $color-brown-dark-2;
+}
+
+.antenna-right {
+  right: 70px;
+  transform: rotate(15deg);
+
+  &::before {
+    top: -5px;
+    right: -7px;
+  }
+}
+
+.antenna-left {
+  left: 70px;
+  transform: rotate(-22deg);
+
+  &::before {
+    top: -8px;
+    left: -7px;
+  }
 }
