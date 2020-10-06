@@ -237,4 +237,20 @@ body {
 
 .feet-right,
 .feet-left {
+  width: 45px;
+  height: 55px;
+  background-color: $color-brown-2;
+  border-radius: 0 0 15px 15px;
+  border: $outline;
+  border-top: none;
+  position: absolute;
+  bottom: -20px;
+  z-index: 2;
+}
+
+.feet-right {
+  right: 50px;
+}
+.feet-left {
+  left: 50px;
 }

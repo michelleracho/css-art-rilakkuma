@@ -237,4 +237,25 @@ body {
 .hand-left::before {
   left: 17px;
 }
+
+.feet-right,
+.feet-left {
+  width: 45px;
+  height: 55px;
+  background-color: #a1662a;
+  border-radius: 0 0 15px 15px;
+  border: 5px solid #3d2104;
+  border-top: none;
+  position: absolute;
+  bottom: -20px;
+  z-index: 2;
+}
+
+.feet-right {
+  right: 50px;
+}
+
+.feet-left {
+  left: 50px;
+}
 /*# sourceMappingURL=main.css.map */
