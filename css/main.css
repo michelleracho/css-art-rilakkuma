@@ -21,16 +21,6 @@ body {
           align-items: center;
 }
 
-.head {
-  width: 200px;
-  height: 170px;
-  background-color: #a1662a;
-  border-radius: 50% / 50%;
-  border: 5px solid #3d2104;
-  position: relative;
-  z-index: 10;
-}
-
 .ear {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,5 +64,104 @@ body {
 
 .ear-left::before {
   right: 10px;
+}
+
+.head {
+  width: 200px;
+  height: 170px;
+  background-color: #a1662a;
+  border-radius: 50% / 50%;
+  border: 5px solid #3d2104;
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head .eye-right,
+.head .eye-left {
+  width: 15px;
+  height: 15px;
+  background-color: #252317;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.head .eye-right {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  right: 50px;
+}
+
+.head .eye-left {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  left: 50px;
+}
+
+.head .snout {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 50px;
+  height: 45px;
+  background-color: #f9f4e1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head .snout .nose {
+  width: 12px;
+  height: 12px;
+  background-color: #252317;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+}
+
+.head .snout .mouth::before,
+.head .snout .mouth::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  background-color: #252317;
+  border-radius: 5px;
+  top: 27px;
+}
+
+.head .snout .mouth::before {
+  left: 13px;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.head .snout .mouth::after {
+  left: 22px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
 }
 /*# sourceMappingURL=main.css.map */

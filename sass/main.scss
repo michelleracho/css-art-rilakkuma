@@ -36,16 +36,6 @@ body {
   // border: 2px solid tomato;
 }
 
-.head {
-  width: 200px;
-  height: 170px;
-  background-color: $color-brown-2;
-  border-radius: 50% / 50%;
-  border: $outline;
-  position: relative;
-  z-index: 10;
-}
-
 .ear {
   display: flex;
   z-index: 1;
@@ -88,5 +78,82 @@ body {
 
   &-left::before {
     right: 10px;
+  }
+}
+
+.head {
+  width: 200px;
+  height: 170px;
+  background-color: $color-brown-2;
+  border-radius: 50% / 50%;
+  border: $outline;
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .eye-right,
+  .eye-left {
+    width: 15px;
+    height: 15px;
+    background-color: $color-black;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .eye-right {
+    order: 1;
+    right: 50px;
+  }
+  .eye-left {
+    order: 3;
+    left: 50px;
+  }
+
+  .snout {
+    order: 2;
+    width: 50px;
+    height: 45px;
+    background-color: $color-white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .nose {
+      width: 12px;
+      height: 12px;
+      background-color: $color-black;
+      border-radius: 50%;
+      position: absolute;
+      top: 15px;
+    }
+
+    .mouth::before,
+    .mouth::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 5px;
+      background-color: $color-black;
+      border-radius: 5px;
+      top: 27px;
+    }
+
+    .mouth::before {
+      left: 13px;
+      transform: rotate(-35deg);
+    }
+
+    .mouth::after {
+      left: 22px;
+      transform: rotate(35deg);
+    }
   }
 }
