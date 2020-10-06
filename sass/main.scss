@@ -1,0 +1,92 @@
+// VARIABLES
+$color-brown-1: #c57c34;
+$color-brown-2: #a1662a;
+$color-brown-dark-1: #6d3d0c;
+$color-brown-dark-2: #502b06;
+$color-brown-dark-3: #3d2104;
+
+$color-yellow-1: #f9bf43;
+$color-yellow-2: #f2cd3a;
+$color-yellow-light-1: #ede254;
+$color-yellow-light-2: #f7de7c;
+
+$color-white: #f9f4e1;
+$color-black: #252317;
+
+$outline: 5px solid $color-brown-dark-3;
+// --------------------------------------------------
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: slategrey;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  // border: 2px solid tomato;
+}
+
+.head {
+  width: 200px;
+  height: 170px;
+  background-color: $color-brown-2;
+  border-radius: 50% / 50%;
+  border: $outline;
+  position: relative;
+  z-index: 10;
+}
+
+.ear {
+  display: flex;
+  z-index: 1;
+
+  &-right,
+  &-left {
+    width: 55px;
+    height: 55px;
+    background-color: $color-brown-2;
+    border: $outline;
+    border-radius: 50%;
+    position: relative;
+    top: 35px;
+    overflow: hidden;
+  }
+
+  &-right {
+    left: 150px;
+  }
+
+  &-left {
+    left: -60px;
+  }
+
+  &-right::before,
+  &-left::before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 50px;
+    background-color: $color-yellow-1;
+    border: $outline;
+    border-radius: 50%;
+    bottom: -15px;
+  }
+
+  &-right::before {
+    right: -10px;
+  }
+
+  &-left::before {
+    right: 10px;
+  }
+}
